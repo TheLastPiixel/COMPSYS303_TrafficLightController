@@ -1,0 +1,10 @@
+scchart mode_1 {
+  	input bool t1, t2, t3, t4;
+  	output int result;
+  	region traffic:
+		initial state RR --> RG with t1 --> GR with t4;
+		state RG --> RY with t2;
+		state RY --> RR with t3;
+		state GR --> YR with t2;
+		state YR --> RR with t3;
+}

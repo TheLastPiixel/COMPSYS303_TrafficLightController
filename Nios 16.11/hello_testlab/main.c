@@ -13,63 +13,93 @@
 #define ESC 27
 #define CLEAR_LCD_STRING "[2J"
 
-unsigned int buttonValue = 0, buttonValuePrevious = 0;
-char pA, pB, pR, pO;
 FILE *lcd;
 
 int main() {
 	// Initialise
-	reset();
 
 	lcd = fopen(LCD_NAME, "w");
 
-	fprintf(lcd, "%c%s", ESC, CLEAR_LCD_STRING);
-	fprintf(lcd, "A: %d, B: %d, R: %d\n", A, B, R);
-	fprintf(lcd, "O: %d\n", O);
-
 	while(1)  {
-		// Fetch button inputs
-		// A is Key 2, B is Key 1, R is Key 0
-		// Remember that keys are active low
-		buttonValue = IORD_ALTERA_AVALON_PIO_DATA(KEYS_BASE);
-		if(buttonValue == 0b011){
-			R = 0;
-			A = 1;
-		}
-		else if(buttonValue == 0b101){
-			R = 0;
-			B = 1;
-		}
-		else if(buttonValue == 0b110){
-			R = 1;
-			A = 0;
-			B = 0;
-		}
-
-		if(!((pA == A) && (pB == B) && (pR == R) && (pO == O))){
-			fprintf(lcd, "%c%s", ESC, CLEAR_LCD_STRING);
-			fprintf(lcd, "A: %d, B: %d, R: %d\n", A, B, R);
-			fprintf(lcd, "O: %d\n", O);
-		}
-
-		pA = A;
-		pB = B;
-		pR = R;
-		pO = O;
-
-		// Output O to Red LED
-		if(O == 1){
-			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_RED_BASE, 0b111111111111111111);
-		}else{
-			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_RED_BASE, 0);
-		}
-
 		// Do a tick!
-		tick();
 
-		buttonValuePrevious = buttonValue;
 	}
 
 	fclose(lcd);
 	return 0;
 }
+
+/*
+ * Initialisers
+ */
+//Initializes the interrupts for the NS and EW pedestrian buttons
+void init_buttons_pio(){
+
+}
+
+/*
+ * Interrupts
+ */
+//handler for the traffic light timer interrupt
+void tlc_timer_isr(){
+
+}
+
+//handler for the red light camera timer interrupt
+void camera_timer_isr(){
+
+}
+
+//handles the NS and EW pedestrian button interrupts
+void NSEW_ped_isr(){
+
+}
+
+
+/*
+ * Setters
+ */
+//write the current mode to the LCD
+void lcd_set_mode(int mode){
+	fprintf(lcd, "%c%s", ESC, CLEAR_LCD_STRING);
+	fprintf(lcd, "MODE: %d\n", mode);
+}
+
+//parses the configuration string and updates the timeouts
+void timeout_data_handler(){
+
+}
+
+/*
+ * Implementers
+ */
+//implements the simple traffic light controller
+void simple_tlc(){
+
+}
+
+//implements the configurable traffic light controller
+void configurable_tlc(){
+
+}
+
+//implements the traffic light controller with integrated camera
+void camera_tlc(){
+
+}
+
+//implements the pedestrian traffic light controller
+void pedestrian_tlc(){
+
+}
+
+//simulates the entry and exit of vehicles at the intersection
+void handle_vehicle_button(){
+
+}
+
+
+
+
+
+

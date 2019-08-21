@@ -1,0 +1,4 @@
+scchart Traffic_Simulation {
+
+    initial state init;
+}

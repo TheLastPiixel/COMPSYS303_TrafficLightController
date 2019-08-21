@@ -1,0 +1,20 @@
+scchart mode_2 {
+
+    input bool t1, t1, t2, t2, t3, t4, pedNS, pedWE;
+  	output string result, pedestrian;
+  	region traffic:
+		initial state RR{ entry / result = "RR" } 
+		--> RG with t1 & !pedNS
+		--> GR with t2 & !pedWE
+		--> RGP with t1 & pedNS
+		--> GRP with t2 & pedWE;
+		state RG{ entry / result = "RG" } --> RY with t3;
+		state RGP{ entry / result = "RGP" } --> RY with t3;
+		state RY{ entry / result = "RY" } --> RR with t4;
+		state GR{ entry / result = "GR" } --> YR with t3;
+		state RGP{ entry / result = "GRP" } --> YR with t3;
+		state YR{ entry / result = "YR" } --> RR with t4;
+	
+	region pedestrian:
+		initial state RR; 
+}

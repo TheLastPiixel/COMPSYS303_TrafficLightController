@@ -1,0 +1,4 @@
+scchart mode_2 {
+
+    initial state init;
+}

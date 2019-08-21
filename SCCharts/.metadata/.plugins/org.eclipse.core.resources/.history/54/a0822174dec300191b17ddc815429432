@@ -1,0 +1,18 @@
+scchart Traffic_Simulation {
+	input int mode;
+	input bool pedNS, pedWE, t1, t2, t3, t4, t5, t6;
+	
+    region mode_1:
+    	initial state RR;
+    		--> RG with t1;
+    	goto RG;
+    		--> RY with t2;
+    	goto RY;
+    		--> RY with t3;
+    	goto RR;
+    		--> RY with t4;
+    	goto GR;
+    		--> RY with t5;
+    	goto YR;
+    		--> RY with t6;
+}

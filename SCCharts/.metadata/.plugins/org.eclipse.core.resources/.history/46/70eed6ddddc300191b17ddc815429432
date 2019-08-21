@@ -1,0 +1,5 @@
+scchart Traffic_Simulation {
+	input int mode;
+	
+    initial state RR;
+}
