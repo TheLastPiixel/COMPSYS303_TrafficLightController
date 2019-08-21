@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Aug 21 17:01:20 2019
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Standard Edition
+Revision Name : Q-SYS
+Top-level Entity Name : Q-SYS
+Family : Cyclone IV E
+Total logic elements : 5,497
+    Total combinational functions : 4,313
+    Dedicated logic registers : 3,208
+Total registers : 3208
+Total pins : 103
+Total virtual pins : 0
+Total memory bits : 310,656
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 1

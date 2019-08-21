@@ -1,0 +1,30 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst QSYS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst QSYS.jtag_uart -pg 1 -lvl 3 -y 300
+preplace inst QSYS.cpu.reset_bridge -pg 1
+preplace inst QSYS.onchip_mem -pg 1 -lvl 3 -y 620
+preplace inst QSYS.cpu.clock_bridge -pg 1
+preplace inst QSYS.clk -pg 1 -lvl 1 -y 680
+preplace inst QSYS.lcd -pg 1 -lvl 3 -y 520
+preplace inst QSYS.green_leds -pg 1 -lvl 3 -y 200
+preplace inst QSYS.cpu.cpu -pg 1
+preplace inst QSYS.switches -pg 1 -lvl 3 -y 920
+preplace inst QSYS.sdram_pll -pg 1 -lvl 2 -y 680
+preplace inst QSYS.sdram -pg 1 -lvl 3 -y 820
+preplace inst QSYS.uart -pg 1 -lvl 3 -y 1220
+preplace inst QSYS.sdram_pll.sys_pll -pg 1
+preplace inst QSYS.cpu -pg 1 -lvl 3 -y 50
+preplace inst QSYS.timer_0 -pg 1 -lvl 3 -y 1020
+preplace inst QSYS.sdram_pll.reset_from_locked -pg 1
+preplace inst QSYS.timer_1 -pg 1 -lvl 3 -y 1120
+preplace inst QSYS.red_leds -pg 1 -lvl 3 -y 720
+preplace inst QSYS.keys -pg 1 -lvl 3 -y 400
+preplace netloc POINT_TO_POINT<net_container>QSYS</net_container>(MASTER)clk.clk,(SLAVE)sdram_pll.ref_clk) 1 1 1 N
+preplace netloc EXPORT<net_container>QSYS</net_container>(SLAVE)clk.clk_in,(SLAVE)QSYS.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>QSYS</net_container>(SLAVE)QSYS.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>QSYS</net_container>(MASTER)QSYS.sdram_pll_clk,(MASTER)sdram_pll.sdram_clk) 1 2 2 NJ 710 NJ
+preplace netloc FAN_OUT<net_container>QSYS</net_container>(SLAVE)jtag_uart.clk,(SLAVE)keys.clk,(SLAVE)green_leds.clk,(SLAVE)timer_1.clk,(SLAVE)red_leds.clk,(SLAVE)cpu.clk,(SLAVE)onchip_mem.clk1,(SLAVE)lcd.clk,(MASTER)sdram_pll.sys_clk,(SLAVE)sdram.clk,(SLAVE)switches.clk,(SLAVE)timer_0.clk,(SLAVE)uart.clk) 1 2 1 480
+preplace netloc FAN_IN<net_container>QSYS</net_container>(MASTER)cpu.data_master,(MASTER)cpu.instruction_master,(SLAVE)cpu.debug_mem_slave) 1 2 2 500 190 860
+levelinfo -pg 1 0 50 990
+levelinfo -hier QSYS 60 90 320 620 880
