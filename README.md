@@ -6,5 +6,7 @@ CS303 Assignment 1
 * SOPCINFO File
 
 ## To Work On
-* SCCharts
-* Implement Simulation
+* Implement Mode 1
+* Implement Mode 2
+* Implement Mode 3
+* Implement Mode 4

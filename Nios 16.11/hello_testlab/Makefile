@@ -142,8 +142,7 @@ ACDS_VERSION := 16.1
 ELF := hello_testlab.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += sccharts.c
-C_SRCS += main.c
+C_SRCS := main.c
 CXX_SRCS :=
 ASM_SRCS :=
 
