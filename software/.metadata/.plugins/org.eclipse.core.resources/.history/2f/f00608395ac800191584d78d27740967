@@ -76,10 +76,12 @@ void init_buttons_pio(void* context, alt_u32 id){
 	if ((*temp) == 1 && traffic != RG)
 	{
 		pedNS = pressed;
+		printf("Button0 has been pressed!\n");
 	}
 	if ((*temp) == 2 && traffic != GR)
 	{
 		pedWE = pressed;
+		printf("Button1 has been pressed!\n");
 	}
 
 	(*temp) = 0;
