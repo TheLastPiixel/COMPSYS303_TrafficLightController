@@ -1,0 +1,24 @@
+11:32:26 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+make all 
+/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
+/usr/bin/sh: line 0: cd: ../../: No such file or directory
+Info: Building ../traffic_simulation_bsp/
+C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:424:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
+  ^
+Info: Linking traffic_simulation.elf
+nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
+Info: (traffic_simulation.elf) 80 KBytes program size (code + initialized data).
+Info:                          8104 KBytes free for stack + heap.
+Info: Creating traffic_simulation.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
+[traffic_simulation build complete]
+
+11:32:34 Build Finished (took 8s.421ms)
+

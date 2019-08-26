@@ -1,0 +1,11 @@
+11:08:01 **** Incremental Build of configuration Nios II for project hello_testlab ****
+make all 
+/usr/bin/sh: line 0: cd: ../hello_testlab_bsp/: No such file or directory
+/usr/bin/sh: line 0: cd: ../../: No such file or directory
+Info: Building ../hello_testlab_bsp/
+C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../hello_testlab_bsp/
+[BSP build complete]
+[hello_testlab build complete]
+
+11:08:05 Build Finished (took 4s.161ms)
+
