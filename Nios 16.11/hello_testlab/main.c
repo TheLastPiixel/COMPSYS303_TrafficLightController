@@ -18,6 +18,11 @@
 int ButtonPressed;
 int Button1 = 0;
 int Button0 = 0;
+int PedNS = 0;
+int PedEW = 0;
+int LEDs = 0;
+int PedCrossing = 0;
+
 
 FILE *lcd;
 int mode, previousMode, timeCountMain, buttonValue = 0;
@@ -58,13 +63,15 @@ void init_buttons_pio(void* context, alt_u32 id){
 	//Allows button 1 and 0 to be click simultaneously
 	if (Button0 == 0)
 	{
-		Button0 = *temp & 0b00001;
+		Button0 = *temp & 0b0001;
+		printf("Button0 has been pressed!\n");
 	}
 	if (Button1 == 0)
 	{
-		Button1 = *temp & 0b00010;
+		Button1 = *temp & 0b0010;
+		printf("Button1 has been pressed!\n");
 	}
-	
+
 	// Clear the edge capture register
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
 
@@ -80,7 +87,7 @@ void init_buttons_pio(void* context, alt_u32 id){
 alt_u32 tlc_timer_isr(void* context){
 	int *timeCount = (int*) context;
 	(*timeCount)++;
-	printf("time:%d\n", *timeCount);
+	//printf("time:%d\n", *timeCount);
 	return 100;
 }
 
@@ -119,7 +126,8 @@ void simple_tlc(){
 	switch(traffic){
 		case RR:
 			// Set green leds
-			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100100);
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100100);
+			LEDs = pow(2,2) + pow(2,5);
 
 			if(timeCountMain >= 5){
 				// next traffic decides whether to go RG or GR
@@ -138,7 +146,8 @@ void simple_tlc(){
 
 		case RG:
 				// Set green leds
-				IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100001);
+				//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100001);
+				LEDs = pow(2,0) + pow(2,5);
 
 				// Set next traffic not to re-do RG
 				if(next_traffic == NS){
@@ -156,7 +165,8 @@ void simple_tlc(){
 				break;
 		case RY:
 			// Set green leds
-			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100010);
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100010);
+			LEDs = pow(2,1) + pow(2,5);
 
 			if(timeCountMain >= 20){
 				traffic = RR;
@@ -169,7 +179,8 @@ void simple_tlc(){
 			break;
 		case GR:
 			// Set green leds
-			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00001100);
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00001100);
+			LEDs = pow(2,2) + pow(2,3);
 
 			// Set next traffic not to re-do GR
 			if(next_traffic == WE){
@@ -186,7 +197,8 @@ void simple_tlc(){
 			break;
 		case YR:
 			// Set green leds
-			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00010100);
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00010100);
+			LEDs = pow(2,2) + pow(2,4);
 
 			if(timeCountMain >= 20){
 				traffic = RR;
@@ -197,7 +209,6 @@ void simple_tlc(){
 				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
 			}
 			break;
-
 	}
 }
 
@@ -213,7 +224,128 @@ void camera_tlc(){
 
 //implements the pedestrian traffic light controller
 void pedestrian_tlc(){
-	if 
+/*	if (Button0 == 1 && traffic == RR && next_traffic == NS)
+	{
+		Button0 = 0;
+		LEDs = LEDs + pow(2, 6);
+
+	}
+	if (Button1 == 1 && traffic == RR && next_traffic == WE)
+	{
+		Button1 = 0;
+		LEDs = LEDs + pow(2, 7);
+
+	} */
+
+	switch(traffic){
+		case RR:
+			// Set green leds
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100100);
+
+
+			//Turns on pedestrian crossing light
+			if (Button0 == 1) {
+				Button0 = 0;
+				PedCrossing = 1;
+				LEDs = pow(2,2) + pow(2,5) + pow(2,6);
+			}
+			if (Button1 == 1) {
+				Button1 = 0;
+				PedCrossing = 1;
+				LEDs = pow(2,2) + pow(2,5) + pow(2,7);
+				printf("Butt1");
+			}
+			if (PedCrossing == 1) {
+				PedCrossing == 0;
+			}
+			else {
+				LEDs = pow(2,2) + pow(2,5);
+			}
+
+
+			if(timeCountMain >= 5){
+				// next traffic decides whether to go RG or GR
+				if(next_traffic == NS){
+					traffic = RG;
+				}else{
+					traffic = GR;
+				}
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout of 0.5 seconds
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+
+			break;
+
+		case RG:
+				// Set green leds
+				//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100001);
+				LEDs = pow(2,0) + pow(2,5);
+
+
+				// Set next traffic not to re-do RG
+				if(next_traffic == NS){
+					next_traffic = WE;
+				}
+
+				if(timeCountMain >= 60){
+					traffic = RY;
+
+					alt_alarm_stop(&timer);
+					timeCountMain = 0;
+					// start the timer, with timeout of 6 seconds
+					alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+				}
+				break;
+		case RY:
+			// Set green leds
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100010);
+			LEDs = pow(2,1) + pow(2,5);
+
+			if(timeCountMain >= 20){
+				traffic = RR;
+
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout of 6 seconds
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+		case GR:
+			// Set green leds
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00001100);
+			LEDs = pow(2,2) + pow(2,3);
+
+			// Set next traffic not to re-do GR
+			if(next_traffic == WE){
+				next_traffic = NS;
+			}
+			if(timeCountMain >= 60){
+				traffic = YR;
+
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout of 6 seconds
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+		case YR:
+			// Set green leds
+			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00010100);
+			LEDs = pow(2,2) + pow(2,4);
+
+			if(timeCountMain >= 20){
+				traffic = RR;
+
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout of 6 seconds
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+
+	}
 }
 
 //simulates the entry and exit of vehicles at the intersection
@@ -287,6 +419,9 @@ int main() {
 		if(mode == 4){
 			camera_tlc();
 		}
+
+		//Turns on LED
+		IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, LEDs);
 
 	}
 
