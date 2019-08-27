@@ -31,12 +31,9 @@
 #define TNS_Y 2
 #define TNS_G 1
 
-int LEDs = 0;
-
-FILE *lcd;
-int mode, previousMode, timeCountMain, buttonValue = 0;
-
-// Enum for the car traffic lights.
+/*
+ * Enum for the car traffic lights.
+ */
 enum traffic{
 	RR, RG, RY, GR, YR
 };
@@ -45,25 +42,42 @@ enum NSEW_traffic_next{
 	NS, WE
 };
 
-// Enum for the pedestrian lights. Two for NS and EW are made respectively.
+/*
+ * Enum for the pedestrian lights. Two for NS and EW are made respectively.
+ */
 enum pedestrian{
 	idle, pressed, running
+};
+
+enum car_state{
+	entered, exited
+};
+
+enum picture_taken{
+	standby, monitoring, taken
 };
 
 /*
  * Declaration of variables
  */
-alt_alarm timer;
+alt_alarm timer, timer1;
 void* timerContext;
+void* timerCameraContext;
 void* context_going_to_be_passed;
+int LEDs = 0;
+FILE *lcd;
+int mode, previousMode, timeCountMain, timeCountCamera, buttonValue = 0;
 enum pedestrian pedNS, pedWE;
 enum traffic traffic;
 enum NSEW_traffic_next next_traffic;
+enum car_state car_action, previous_car_action;
+enum picture_taken cam_0;
+
 
 /*
  * Initialisers
  */
-//Initializes the interrupts for the NS and EW pedestrian buttons
+//Initializes the interrupts for the NS, EW pedestrian and car drive through buttons
 
 void init_buttons_pio(void* context, alt_u32 id){
 	int* temp = (int*) context; // need to cast the context first before using it
@@ -72,19 +86,24 @@ void init_buttons_pio(void* context, alt_u32 id){
 	// Clear the edge capture register
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
 
-	//Allows button 1 and 0 to be click simultaneously
-	if ((*temp) == 1 && traffic != RG)
-	{
+	if ((*temp) == 1 && traffic != RG){
 		pedNS = pressed;
 	}
-	if ((*temp) == 2 && traffic != GR)
-	{
+	if ((*temp) == 2 && traffic != GR){
 		pedWE = pressed;
+	}
+	if ((*temp) == 4 && mode == 4){
+		if(car_action == exited){
+			car_action = entered;
+			printf("Camera activated\n");
+		}else{
+			car_action = exited;
+			printf("Vehicle left\n");
+		}
 	}
 
 	(*temp) = 0;
 }
-
 
 /*
  * Interrupts
@@ -93,20 +112,15 @@ void init_buttons_pio(void* context, alt_u32 id){
 alt_u32 tlc_timer_isr(void* context){
 	int *timeCount = (int*) context;
 	(*timeCount)++;
-	//printf("time:%d\n", *timeCount);
 	return 100;
 }
 
 //handler for the red light camera timer interrupt
-void camera_timer_isr(){
-
+alt_u32 camera_timer_isr(void* context){
+	int *timeCountCamera = (int*) context;
+	(*timeCountCamera)++;
+	return 100;
 }
-
-//handles the NS and EW pedestrian button interrupts
-void NSEW_ped_isr(){
-
-}
-
 
 /*
  * Setters
@@ -132,7 +146,6 @@ void simple_tlc(){
 	switch(traffic){
 		case RR:
 			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100100);
 			LEDs = TWE_R + TNS_R;
 
 			if(timeCountMain >= 5){
@@ -152,7 +165,6 @@ void simple_tlc(){
 
 		case RG:
 			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100001);
 			LEDs = TWE_R + TNS_G;
 
 			// Set next traffic not to re-do RG
@@ -171,7 +183,6 @@ void simple_tlc(){
 			break;
 		case RY:
 			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100010);
 			LEDs = TWE_R + TNS_Y;
 
 			if(timeCountMain >= 20){
@@ -185,7 +196,6 @@ void simple_tlc(){
 			break;
 		case GR:
 			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00001100);
 			LEDs = TWE_G + TNS_R;
 
 			// Set next traffic not to re-do GR
@@ -203,7 +213,6 @@ void simple_tlc(){
 			break;
 		case YR:
 			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00010100);
 			LEDs = TWE_Y + TNS_R;
 
 			if(timeCountMain >= 20){
@@ -218,18 +227,10 @@ void simple_tlc(){
 	}
 }
 
-//implements the configurable traffic light controller
-void configurable_tlc(){
-
-}
-
-//implements the traffic light controller with integrated camera
-void camera_tlc(){
-
-}
-
 //implements the pedestrian traffic light controller
 void pedestrian_tlc(){
+	 // Any state (pedNS and/or pedWE) that is in pressed state.
+	 // Set respective running pedestrian signal back to idle on yellow light.
 	switch(traffic){
 		case RG:
 			if(pedNS == pressed){
@@ -260,145 +261,101 @@ void pedestrian_tlc(){
 		default:
 			break;
 	}
+}
 
+//implements the configurable traffic light controller
+void configurable_tlc(){
 
-/*	if (Button0 == 1 && traffic == RR && next_traffic == NS)
-	{
-		Button0 = 0;
-		LEDs = LEDs + pow(2, 6);
+}
 
+//implements the traffic light controller with integrated camera
+void camera_tlc(){
+	if(timeCountCamera >= 20 && cam_0 == monitoring){
+		printf("Snapshot Taken!\n");
+		cam_0 = taken;
 	}
-	if (Button1 == 1 && traffic == RR && next_traffic == WE)
-	{
-		Button1 = 0;
-		LEDs = LEDs + pow(2, 7);
-
-	} */
-
-
-	/*
 	switch(traffic){
-		case RR:
-			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100100);
-
-
-			//Turns on pedestrian crossing light
-			if (Button0 == 1) {
-				Button0 = 0;
-				PedCrossing = 1;
-				LEDs = pow(2,2) + pow(2,5) + pow(2,6);
-			}
-			if (Button1 == 1) {
-				Button1 = 0;
-				PedCrossing = 1;
-				LEDs = pow(2,2) + pow(2,5) + pow(2,7);
-				printf("Butt1");
-			}
-			if (PedCrossing == 1) {
-				PedCrossing = 0;
-			}
-			else {
-				LEDs = pow(2,2) + pow(2,5);
-			}
-
-
-			if(timeCountMain >= 5){
-				// next traffic decides whether to go RG or GR
-				if(next_traffic == NS){
-					traffic = RG;
-				}else{
-					traffic = GR;
-				}
-				alt_alarm_stop(&timer);
-				timeCountMain = 0;
-				// start the timer, with timeout of 0.5 seconds
-				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
-			}
-
-			break;
-
-		case RG:
-				// Set green leds
-				//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100001);
-				LEDs = pow(2,0) + pow(2,5);
-
-
-				// Set next traffic not to re-do RG
-				if(next_traffic == NS){
-					next_traffic = WE;
-				}
-
-				if(timeCountMain >= 60){
-					traffic = RY;
-
-					alt_alarm_stop(&timer);
-					timeCountMain = 0;
-					// start the timer, with timeout of 6 seconds
-					alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
-				}
-				break;
-		case RY:
-			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00100010);
-			LEDs = pow(2,1) + pow(2,5);
-
-			if(timeCountMain >= 20){
-				traffic = RR;
-
-				alt_alarm_stop(&timer);
-				timeCountMain = 0;
-				// start the timer, with timeout of 6 seconds
-				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
-			}
-			break;
-		case GR:
-			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00001100);
-			LEDs = pow(2,2) + pow(2,3);
-
-			// Set next traffic not to re-do GR
-			if(next_traffic == WE){
-				next_traffic = NS;
-			}
-			if(timeCountMain >= 60){
-				traffic = YR;
-
-				alt_alarm_stop(&timer);
-				timeCountMain = 0;
-				// start the timer, with timeout of 6 seconds
-				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
-			}
-			break;
 		case YR:
-			// Set green leds
-			//IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, 0b00010100);
-			LEDs = pow(2,2) + pow(2,4);
 
-			if(timeCountMain >= 20){
-				traffic = RR;
+			// Check that car has entered/exited
 
-				alt_alarm_stop(&timer);
-				timeCountMain = 0;
-				// start the timer, with timeout of 6 seconds
-				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			//First if statement checks for recent change in car action.
+			if(car_action == entered && previous_car_action != car_action){
+
+				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
+				cam_0 = monitoring;
+
+			//Check that the car has exited. Report time taken
+			}else if(cam_0 != standby && car_action == exited){
+				printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
+						timeCountCamera / 10, timeCountCamera % 10);
+				alt_alarm_stop(&timer1);
+				timeCountCamera = 0;
+				cam_0 = standby;
 			}
 			break;
 
-	}*/
+		case RY:
+			// Check that car has entered/exited
+
+			//First if statement checks for recent change in car action.
+			if(car_action == entered && previous_car_action != car_action){
+
+				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
+				cam_0 = monitoring;
+
+			//Check that the car has exited. Report time taken
+			}else if(cam_0 != standby && car_action == exited){
+				printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
+						timeCountCamera / 10, timeCountCamera % 10);
+				alt_alarm_stop(&timer1);
+				timeCountCamera = 0;
+				cam_0 = standby;
+			}
+			break;
+
+		default:
+			/*
+			 * Other states such as RG, GR and RR.
+			 * Take picture immediately when car passes on button click.
+			 */
+
+			// Check for change in car action.
+			if(previous_car_action != car_action){
+
+				//Check that the snapshot is not taken and changed to entered state.
+				if(car_action == entered && cam_0 == standby){
+					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
+					printf("Snapshot Taken!\n");
+					cam_0 = taken;
+
+				//Anytime the vehicle exits
+				}else if(car_action == exited){
+					printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
+							timeCountCamera / 10, timeCountCamera % 10);
+					alt_alarm_stop(&timer1);
+					timeCountCamera = 0;
+					cam_0 = standby;
+				}
+			}
+
+			break;
+	}
+	previous_car_action = car_action;
 }
 
-//simulates the entry and exit of vehicles at the intersection
-void handle_vehicle_button(){
 
-}
+
 
 int main() {
 	// Initialise
+	car_action = exited;
+	previous_car_action = exited;
 	pedNS = idle;
 	pedWE = idle;
 	traffic = RR;
 	next_traffic = NS;
+	cam_0 = standby;
 
 	/*
 	 * Make sure only the 2 switches on the right will change the mode of the simulation.
@@ -422,13 +379,20 @@ int main() {
 	/*
 	 * Timer interrupt Setup
 	 */
-
-
-	// start the timer, with timeout of 100 milli-seconds
+	// start the tlc timer, with timeout of 100 milli-seconds
 	timeCountMain = 0;
 	timerContext = (void*) &timeCountMain;
 	alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
 
+	timeCountCamera = 0;
+	timerCameraContext = (void*) &timeCountCamera;
+
+	/*
+	// setup camera timer
+	timeCountCamera = 0;
+	timerCameraContext = (void*) &timeCountCamera;
+	alt_alarm_start(&timer1, 100, NSEW_ped_isr, timerCameraContext);
+*/
 	while(1)  {
 
 		/*
@@ -440,6 +404,7 @@ int main() {
 			mode = (IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) % 4) + 1;
 			if(mode != previousMode){
 				lcd_set_mode(mode);
+				car_action = exited;
 			}
 			previousMode = mode;
 		}

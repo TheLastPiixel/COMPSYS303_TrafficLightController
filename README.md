@@ -4,9 +4,11 @@ CS303 Assignment 1
 ## Currently Working
 * SOF File
 * SOPCINFO File
+* Mode 1
+* Mode 2
+* Mode 4
 
 ## To Work On
-* Implement Mode 1
-* Implement Mode 2
+
 * Implement Mode 3
-* Implement Mode 4
+
