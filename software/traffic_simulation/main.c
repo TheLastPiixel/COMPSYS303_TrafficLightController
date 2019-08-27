@@ -11,6 +11,7 @@
 #include <alt_types.h> // alt_u32 is a kind of alt_types
 #include <sys/alt_irq.h> // to register interrupts
 #include <stdio.h>
+#include <stdlib.h>
 
 #define ESC 27
 #define CLEAR_LCD_STRING "[2J"
@@ -65,14 +66,15 @@ void* timerContext;
 void* timerCameraContext;
 void* context_going_to_be_passed;
 int LEDs = 0;
-FILE *lcd;
+FILE *lcd, *uart;
 int mode, previousMode, timeCountMain, timeCountCamera, buttonValue = 0;
 enum pedestrian pedNS, pedWE;
 enum traffic traffic;
 enum NSEW_traffic_next next_traffic;
 enum car_state car_action, previous_car_action;
 enum picture_taken cam_0;
-
+int settings_made = 0;
+int t[6] = {5,5,5,5,5,5};
 
 /*
  * Initialisers
@@ -133,7 +135,45 @@ void lcd_set_mode(){
 
 //parses the configuration string and updates the timeouts
 void timeout_data_handler(){
+	if(uart != NULL && settings_made == 0){
+		fprintf(uart, "Insert t values in format t1,t2,t3,t4,t5,t6[\\r]\\n:\r\n");
+	}
 
+	//Iterator for data position
+	char data;
+	char num_digits[4];
+	int num_numbers = 0, num_commas = 0;
+
+	//Check that the string format is correct and enter is pressed.
+	while(IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) == 6 && settings_made == 0){
+		data = fgetc(uart);
+
+		//Check that the data input consists only commas
+		if((data >= '0' && data <= '9') || data == ','){
+
+			// Check that the player is entering digit number.
+			if(num_numbers < 4 && data != ',' && num_commas < 6){
+				num_digits[num_numbers] = data;
+				num_numbers++;
+				fprintf(uart, "%c", data);
+
+			// Check that the player confirms the five t numbers using comma
+			}else if(num_numbers > 0 && data == ',' && num_commas < 6){
+				num_numbers = 0;
+				t[num_commas] = (int) num_digits;
+				num_commas++;
+
+				// Clear data
+				num_digits[0] = 0;
+				fprintf(uart, "%c", data);
+
+			// Finally escape this loop.
+			}else if(num_commas > 5){
+				settings_made = 1;
+			}
+
+		}
+	}
 }
 
 /*
@@ -263,13 +303,99 @@ void pedestrian_tlc(){
 
 //implements the configurable traffic light controller
 void configurable_tlc(){
+	switch(traffic){
+		case RR:
+			// Set green leds
+			LEDs = TWE_R + TNS_R;
 
+			// next traffic decides whether to go RG or GR
+			if(next_traffic == NS && timeCountMain >= t[0]){
+				traffic = RG;
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+
+				// start the timer, with timeout
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}else if(timeCountMain >= t[3]){
+				traffic = GR;
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+
+				// start the timer, with timeout
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+
+		case RG:
+			// Set green leds
+			LEDs = TWE_R + TNS_G;
+
+			// Set next traffic not to re-do RG
+			if(next_traffic == NS){
+				next_traffic = WE;
+			}
+
+			if(timeCountMain >= t[1]){
+				traffic = RY;
+
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+		case RY:
+			// Set green leds
+			LEDs = TWE_R + TNS_Y;
+
+			if(timeCountMain >= t[2]){
+				traffic = RR;
+
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+		case GR:
+			// Set green leds
+			LEDs = TWE_G + TNS_R;
+
+			// Set next traffic not to re-do GR
+			if(next_traffic == WE){
+				next_traffic = NS;
+			}
+			if(timeCountMain >= t[4]){
+				traffic = YR;
+
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+		case YR:
+			// Set green leds
+			LEDs = TWE_Y + TNS_R;
+
+			if(timeCountMain >= t[5]){
+				traffic = RR;
+
+				alt_alarm_stop(&timer);
+				timeCountMain = 0;
+				// start the timer, with timeout
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
+			}
+			break;
+	}
 }
 
 //implements the traffic light controller with integrated camera
 void camera_tlc(){
 	if(timeCountCamera >= 20 && cam_0 == monitoring){
-		printf("Snapshot Taken!\n");
+		if(uart != NULL){
+			fprintf(uart, "Snapshot Taken!\r\n");
+		}
 		cam_0 = taken;
 	}
 	switch(traffic){
@@ -279,15 +405,20 @@ void camera_tlc(){
 
 			//First if statement checks for recent change in car action.
 			if(car_action == entered && previous_car_action != car_action){
-				printf("Camera activated\n");
+				if(uart != NULL){
+					fprintf(uart, "Camera activated\r\n");
+				}
 				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 				cam_0 = monitoring;
 
 			//Check that the car has exited. Report time taken
 			}else if(cam_0 != standby && car_action == exited){
-				printf("Vehicle left\n");
-				printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
-						timeCountCamera / 10, timeCountCamera % 10);
+				if(uart != NULL){
+					fprintf(uart, "Vehicle left\r\n");
+					fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n\n",
+											timeCountCamera / 10, timeCountCamera % 10);
+				}
+
 				alt_alarm_stop(&timer1);
 				timeCountCamera = 0;
 				cam_0 = standby;
@@ -299,15 +430,19 @@ void camera_tlc(){
 
 			//First if statement checks for recent change in car action.
 			if(car_action == entered && previous_car_action != car_action){
-				printf("Camera activated\n");
+				if(uart != NULL){
+					fprintf(uart, "Camera activated\r\n");
+				}
 				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 				cam_0 = monitoring;
 
 			//Check that the car has exited. Report time taken
 			}else if(cam_0 != standby && car_action == exited){
-				printf("Vehicle left\n");
-				printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
-						timeCountCamera / 10, timeCountCamera % 10);
+				if(uart != NULL){
+					fprintf(uart, "Vehicle left\r\n");
+					fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n\n",
+											timeCountCamera / 10, timeCountCamera % 10);
+				}
 				alt_alarm_stop(&timer1);
 				timeCountCamera = 0;
 				cam_0 = standby;
@@ -325,16 +460,20 @@ void camera_tlc(){
 
 				//Check that the snapshot is not taken and changed to entered state.
 				if(car_action == entered && cam_0 == standby){
-					printf("Camera activated\n");
 					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
-					printf("Snapshot Taken!\n");
+					if(uart != NULL){
+						fprintf(uart, "Camera activated\r\n");
+						fprintf(uart, "Snapshot Taken!\r\n");
+					}
 					cam_0 = taken;
 
 				//Anytime the vehicle exits
 				}else if(car_action == exited){
-					printf("Vehicle left\n");
-					printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
-							timeCountCamera / 10, timeCountCamera % 10);
+					if(uart != NULL){
+						fprintf(uart, "Vehicle left\r\n");
+						fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n\n",
+												timeCountCamera / 10, timeCountCamera % 10);
+					}
 					alt_alarm_stop(&timer1);
 					timeCountCamera = 0;
 					cam_0 = standby;
@@ -366,6 +505,7 @@ int main() {
 	mode = (IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) % 4) + 1;
 
 	lcd = fopen(LCD_NAME, "w");
+	uart = fopen(UART_NAME, "r+");
 
 	/*
 	 * Buttons Interrupt Setup
@@ -389,24 +529,20 @@ int main() {
 	timeCountCamera = 0;
 	timerCameraContext = (void*) &timeCountCamera;
 
-	/*
-	// setup camera timer
-	timeCountCamera = 0;
-	timerCameraContext = (void*) &timeCountCamera;
-	alt_alarm_start(&timer1, 100, NSEW_ped_isr, timerCameraContext);
-*/
 	while(1)  {
 
 		/*
 		 * This function gets the switches setup and prints the value of mode on LCD.
 		 * LCD re-print only happens when the mode has changed.
 		 * The mode can only change in the condition that traffic state is on RR.
+		 * Reset some settings to initial when switches changed.
 		 */
 		if(traffic == RR){
 			mode = (IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) % 4) + 1;
 			if(mode != previousMode){
 				lcd_set_mode(mode);
 				car_action = exited;
+				settings_made = 0;
 			}
 			previousMode = mode;
 		}
@@ -426,7 +562,11 @@ int main() {
 				camera_tlc();
 			}
 		}else{
-			configurable_tlc();
+			if(traffic == RR && IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) == 6 ){
+				timeout_data_handler();
+			}else{
+				configurable_tlc();
+			}
 		}
 
 
@@ -436,6 +576,7 @@ int main() {
 	}
 
 	fclose(lcd);
+	fclose(uart);
 	return 0;
 }
 

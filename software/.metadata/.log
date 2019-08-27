@@ -1171,3 +1171,1347 @@ Binding(ALT+CTRL+I,
 
 !ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:04:04.127
 !MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:44:51.626
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:44:52.376
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 17:44:55.143
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:44:55.473
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:46:06.355
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:46:07.025
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 17:46:09.851
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:46:10.251
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:46:59.050
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:46:59.820
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 17:47:02.716
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:47:02.766
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:47:39.312
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:47:40.022
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 17:47:42.856
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:47:42.906
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:50:19.933
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:50:20.673
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 17:50:23.561
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:50:23.621
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:53:05.559
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:53:06.279
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 17:53:09.114
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 17:53:09.164
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:01:35.850
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:01:36.640
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:01:39.486
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:01:39.536
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:03:15.556
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:03:16.266
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:03:19.081
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:03:19.141
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:03:19.691
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:03:22.554
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:03:22.614
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:04:53.735
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:04:54.475
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:04:57.212
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:04:57.262
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:04:58.102
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:04:58.772
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:05:01.603
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:05:01.653
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:07:12.723
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:07:13.393
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:07:16.218
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:07:16.268
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:10:17.022
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:10:17.763
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:10:20.599
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:10:20.649
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:11:01.045
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:11:01.745
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:11:04.530
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:11:04.580
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:11:52.666
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:11:53.326
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:11:56.141
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:11:56.191
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:12:45.453
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:12:46.163
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:12:49.007
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:12:49.057
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:13:32.526
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:13:33.216
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:13:36.061
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:13:36.111
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:13:57.411
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:13:58.131
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:14:00.976
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:14:01.026
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:14:26.199
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:14:26.899
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:14:29.744
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:14:29.794
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:14:57.463
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:14:58.143
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:15:00.979
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:15:01.029
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:15:40.034
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:15:40.744
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:15:43.609
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:15:43.669
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:16:33.768
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:16:34.448
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:16:37.292
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:16:37.352
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:20:19.863
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:20:20.613
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:20:23.478
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:20:23.528
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:21:24.326
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:21:25.036
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:21:27.911
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:21:27.971
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:24:04.793
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:24:05.493
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:24:08.339
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:24:08.389
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:24:42.380
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:24:43.080
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:24:45.935
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:24:45.985
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:28:18.009
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:28:18.709
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:28:21.525
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:28:21.575
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:34:41.550
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:34:42.290
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:34:45.075
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:34:45.135
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:36:47.850
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:36:48.570
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:36:51.416
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:36:51.476
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:38:15.754
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:38:16.514
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:38:19.382
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:38:19.432
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:42:44.957
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:42:45.587
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:42:48.344
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:42:48.394
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:47:31.319
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:47:31.999
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 18:47:34.824
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 18:47:34.884
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:00:45.500
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:00:46.190
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:00:49.046
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:00:49.146
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:01:59.448
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:02:00.128
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:02:02.982
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:02:03.042
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:03:06.052
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:03:06.742
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:03:09.597
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:03:09.657
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:04:36.550
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:04:37.230
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:04:40.114
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:04:40.174
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:10:06.158
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:10:06.838
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:10:09.653
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:10:09.703
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:11:20.080
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:11:20.780
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:11:23.666
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:11:23.726
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:12:46.423
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:12:47.133
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:12:49.908
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:12:49.958
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:12:59.685
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:13:00.375
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:13:03.182
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:13:03.392
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:13:04.112
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:13:04.812
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:13:07.613
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:13:07.663
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:14:23.824
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:14:24.514
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:14:27.532
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:14:27.592
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:15:25.101
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:15:25.791
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:15:28.616
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:15:28.666
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:17:37.568
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:17:38.258
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:17:41.113
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:17:41.163
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:18:23.813
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:18:24.493
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:18:27.339
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:18:27.399
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:20:05.305
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:20:06.015
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:20:08.859
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:20:08.909
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:20:44.471
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:20:45.191
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:20:48.056
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:20:48.106
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:21:20.508
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:21:21.237
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:21:24.093
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:21:24.143
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:25:21.791
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:25:22.501
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 19:25:25.346
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 19:25:25.396
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:01:37.723
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:01:38.403
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:01:41.299
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:01:41.389
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:01:44.126
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, --accept-bad-sysid, //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf] return code: 2, no processors found
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:01:44.136
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:02:03.980
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:02:06.745
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:02:06.795
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:03:28.530
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:03:29.240
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:03:32.085
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:03:32.145
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:09:06.530
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:09:07.230
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:09:10.064
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:09:10.114
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:10:28.352
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:10:29.052
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:10:31.868
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:10:31.918
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:17:57.279
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:17:57.979
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:18:00.814
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:18:00.865
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:23:17.838
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:23:18.598
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:23:21.540
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:23:21.590
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:31:07.625
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:31:08.355
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:31:11.210
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:31:11.270
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:43:40.092
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:43:40.802
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:43:43.648
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:43:43.708
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:44:49.964
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:44:50.654
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:44:53.499
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:44:53.559
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:46:11.585
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:46:12.245
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:46:15.089
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:46:15.139
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:46:57.431
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:46:58.132
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:47:00.957
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:47:01.017
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:49:31.412
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:49:32.132
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:49:34.947
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:49:35.007
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:49:52.575
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:49:53.215
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:49:56.030
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:49:56.080
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:50:32.480
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:50:33.140
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:50:35.987
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:50:36.057
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:52:35.631
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:52:36.321
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:52:39.016
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:52:39.066
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:54:40.073
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:54:40.783
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:54:43.628
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:54:43.678
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:55:49.429
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:55:50.089
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:55:52.855
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:55:52.905
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:56:38.104
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:56:38.804
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:56:41.609
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:56:41.659
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:57:34.589
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:57:35.419
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 20:57:38.296
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 20:57:38.356
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:00:54.377
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:00:55.097
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:00:57.899
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:00:57.949
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:01:57.412
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:01:58.112
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:02:00.870
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:02:00.930
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:02:42.243
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:02:42.973
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:02:45.699
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:02:45.749
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:03:40.521
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:03:41.261
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:03:43.996
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:03:44.046
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:04:46.026
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:04:46.746
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:04:49.541
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:04:49.591
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:05:08.477
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:05:09.227
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:05:12.032
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:05:12.082
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:05:55.752
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:05:56.432
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:05:59.298
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:05:59.348
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:07:04.729
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:07:05.439
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:07:08.247
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:07:08.297
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:12:22.262
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:12:22.968
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:12:25.822
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:12:25.872
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:13:24.716
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:13:25.446
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:13:28.301
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:13:28.351
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:14:33.100
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:14:33.820
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:14:36.676
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:14:36.736
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:15:05.022
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:15:05.692
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:15:08.538
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:15:08.588
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:16:46.150
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:16:46.790
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:16:49.576
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:16:49.636
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:17:39.388
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:17:40.088
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:17:42.923
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:17:42.973
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:19:15.205
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:19:15.925
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:19:18.700
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:19:18.870
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:23:53.918
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:23:54.618
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:23:57.474
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:23:57.524
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:26:54.478
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:26:55.138
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:26:57.912
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:26:57.962
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:28:03.787
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:28:04.457
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:28:07.234
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:28:07.284
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:29:40.549
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:29:41.239
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:29:43.954
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:29:44.004
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:37:16.804
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:37:17.504
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:37:20.303
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:37:20.443
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:39:20.449
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:39:21.179
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:39:23.994
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:39:24.044
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:40:29.916
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:40:30.576
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:40:33.366
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:40:33.416
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:41:06.750
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:41:07.410
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:41:10.195
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:41:10.245
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:47:07.986
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:47:08.706
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:47:11.537
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:47:11.587
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:48:45.254
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:48:45.934
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:48:48.808
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:48:48.858
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:50:58.119
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:50:58.799
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:51:01.635
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:51:01.695
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:53:07.887
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:53:08.567
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:53:11.392
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:53:11.441
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:54:25.480
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:54:26.190
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:54:29.015
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:54:29.065
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:55:29.352
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:55:30.032
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 21:55:32.897
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 21:55:32.967
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:03:42.410
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:03:43.110
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:03:45.964
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:03:46.014
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:09:10.900
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:09:11.630
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:09:14.496
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:09:14.546
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:09:50.442
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:09:51.142
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:09:53.997
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:09:54.047
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:10:56.795
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:10:57.465
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:11:00.331
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:11:00.381
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:11:31.323
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:11:32.063
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:11:34.929
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:11:34.979
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:13:32.650
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:13:33.330
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:13:36.186
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:13:36.236
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:14:19.963
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:14:20.753
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:14:23.618
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:14:23.678
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:14:51.037
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:14:51.727
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:14:54.583
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:14:54.633
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:17:10.463
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:17:11.153
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:17:13.950
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:17:14.000
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:26:20.840
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:26:21.620
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:26:24.405
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:26:24.455
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:27:38.380
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:27:39.060
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:27:41.914
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:27:42.004
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:29:02.236
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:29:02.926
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:29:05.761
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:29:05.811
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:33:01.909
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:33:02.579
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:33:05.374
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:33:05.424
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:34:07.420
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:34:08.110
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2019-08-27 22:34:10.925
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2019-08-27 22:34:10.985
+!MESSAGE Executing: [C:/intelfpga/16.1/quartus\bin64\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/traffic_simulation.elf]
