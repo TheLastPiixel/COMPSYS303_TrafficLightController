@@ -95,10 +95,8 @@ void init_buttons_pio(void* context, alt_u32 id){
 	if ((*temp) == 4 && mode == 4){
 		if(car_action == exited){
 			car_action = entered;
-			printf("Camera activated\n");
 		}else{
 			car_action = exited;
-			printf("Vehicle left\n");
 		}
 	}
 
@@ -281,12 +279,13 @@ void camera_tlc(){
 
 			//First if statement checks for recent change in car action.
 			if(car_action == entered && previous_car_action != car_action){
-
+				printf("Camera activated\n");
 				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 				cam_0 = monitoring;
 
 			//Check that the car has exited. Report time taken
 			}else if(cam_0 != standby && car_action == exited){
+				printf("Vehicle left\n");
 				printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
 						timeCountCamera / 10, timeCountCamera % 10);
 				alt_alarm_stop(&timer1);
@@ -300,12 +299,13 @@ void camera_tlc(){
 
 			//First if statement checks for recent change in car action.
 			if(car_action == entered && previous_car_action != car_action){
-
+				printf("Camera activated\n");
 				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 				cam_0 = monitoring;
 
 			//Check that the car has exited. Report time taken
 			}else if(cam_0 != standby && car_action == exited){
+				printf("Vehicle left\n");
 				printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
 						timeCountCamera / 10, timeCountCamera % 10);
 				alt_alarm_stop(&timer1);
@@ -325,12 +325,14 @@ void camera_tlc(){
 
 				//Check that the snapshot is not taken and changed to entered state.
 				if(car_action == entered && cam_0 == standby){
+					printf("Camera activated\n");
 					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 					printf("Snapshot Taken!\n");
 					cam_0 = taken;
 
 				//Anytime the vehicle exits
 				}else if(car_action == exited){
+					printf("Vehicle left\n");
 					printf("Vehicle time in intersection taken: %d.%d seconds\n\n",
 							timeCountCamera / 10, timeCountCamera % 10);
 					alt_alarm_stop(&timer1);
@@ -417,15 +419,16 @@ int main() {
 			simple_tlc();
 
 			//Only mode one does not utilise pedestrian crossing
-			if(mode != 1){
+			if(mode == 2){
 				pedestrian_tlc();
+			}
+			if(mode == 4){
+				camera_tlc();
 			}
 		}else{
 			configurable_tlc();
 		}
-		if(mode == 4){
-			camera_tlc();
-		}
+
 
 		//Turns on LEDs based on TLC
 		IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, LEDs);
