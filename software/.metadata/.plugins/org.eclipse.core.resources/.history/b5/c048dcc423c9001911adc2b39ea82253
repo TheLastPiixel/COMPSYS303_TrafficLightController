@@ -95,7 +95,7 @@ void init_buttons_pio(void* context, alt_u32 id){
 		pedWE = pressed;
 	}
 	if ((*temp) == 4 && mode == 4){
-		if(car_action == exited && (traffic != RG && traffic != GR)){
+		if(car_action == exited){
 			car_action = entered;
 		}else{
 			car_action = exited;

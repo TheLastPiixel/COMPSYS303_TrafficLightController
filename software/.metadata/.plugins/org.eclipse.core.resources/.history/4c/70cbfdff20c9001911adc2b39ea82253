@@ -95,7 +95,7 @@ void init_buttons_pio(void* context, alt_u32 id){
 		pedWE = pressed;
 	}
 	if ((*temp) == 4 && mode == 4){
-		if(car_action == exited && (traffic != RG && traffic != GR)){
+		if(car_action == exited){
 			car_action = entered;
 		}else{
 			car_action = exited;
@@ -170,45 +170,45 @@ void timeout_data_handler(){
 
 			// Finally escape this loop.
 			}else if(num_commas > 4 && data == 'z'){
+				fprintf(uart, "%c", data);
 				num_digits[increment] = '\0';
 				settings_made = 1;
 				fprintf(uart, "\r\n%s\r\n", num_digits);
-				//Iterates through num_digits
-				char temp[5];
-				int PosT = 0;
-				int TempIterator = 0;
-				for (int i=0; i<sizeof(num_digits); i++) {
-					if (num_digits[i] >= '0' && num_digits[i] <= '9') {
-						temp[TempIterator] = num_digits[i];
-						TempIterator++;
-					}
-					else if (num_digits[i] == ',') {
-						t[PosT] = atoi(temp);
-						temp[0] = '\0';
-						TempIterator = 0;
-						PosT++;
-					}
-					else if (num_digits[i] == '\0') {
-						t[PosT] = atoi(temp);
-						temp[0] = '\0';
-						PosT = 0;
-
-						printf("t[0]: %d, ", t[0]);
-						printf("t[1]: %d, ", t[1]);
-						printf("t[2]: %d, ", t[2]);
-						printf("t[3]: %d, ", t[3]);
-						printf("t[4]: %d, ", t[4]);
-						printf("t[5]: %d\n", t[5]);
-
-						break;
-					}
-				}
 			}
 
 		}
 	}
 
+	//Iterates through num_digits
+	char temp[5];
+	int PosT = 0;
+	int TempIterator = 0;
+	for (int i=0; i<sizeof(num_digits); i++) {
+		if (num_digits[i] >= '0' && num_digits[i] <= '9') {
+			temp[TempIterator] = num_digits[i];
+			TempIterator++;
+		}
+		else if (num_digits[i] == ',') {
+			t[PosT] = atoi(temp);
+			temp[0] = '\0';
+			TempIterator = 0;
+			PosT++;
+		}
+		else if (num_digits[i] == '\0') {
+			t[PosT] = atoi(temp);
+			temp[0] = "\0";
+			PosT = 0;
 
+			printf("%d", t[0]);
+			printf("%d", t[1]);
+			printf("%d", t[2]);
+			printf("%d", t[3]);
+			printf("%d", t[4]);
+			printf("%d", t[5]);
+
+			break;
+		}
+	}
 }
 
 /*
@@ -599,9 +599,9 @@ int main() {
 		}else{
 			if(traffic == RR && IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) == 6 ){
 				timeout_data_handler();
+			}else{
+				configurable_tlc();
 			}
-			configurable_tlc();
-
 		}
 
 

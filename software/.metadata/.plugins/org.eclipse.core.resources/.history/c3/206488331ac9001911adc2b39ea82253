@@ -95,7 +95,7 @@ void init_buttons_pio(void* context, alt_u32 id){
 		pedWE = pressed;
 	}
 	if ((*temp) == 4 && mode == 4){
-		if(car_action == exited && (traffic != RG && traffic != GR)){
+		if(car_action == exited){
 			car_action = entered;
 		}else{
 			car_action = exited;
@@ -136,79 +136,48 @@ void lcd_set_mode(){
 //parses the configuration string and updates the timeouts
 void timeout_data_handler(){
 	if(uart != NULL && settings_made == 0){
-		fprintf(uart, "Insert t values in format t1,t2,t3,t4,t5,t6[\\r]\\n: (Press Z to enter)\r\n");
+		fprintf(uart, "Insert t values in format t1,t2,t3,t4,t5,t6[\\r]\\n:\r\n");
 	}
 
 	//Iterator for data position
 	char data;
 	char num_digits[31];
-	int num_numbers = 0, num_commas = 0, increment = 0;
+	int num_numbers = 0, num_commas = 0;
 
 	//Check that the string format is correct and enter is pressed.
 	while(IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) == 6 && settings_made == 0){
 		data = fgetc(uart);
 
 		//Check that the data input consists only commas
-		if((data >= '0' && data <= '9') || data == ',' || data == 'z'){
+		if((data >= '0' && data <= '9') || data == ','){
 
 			// Check that the player is entering digit number.
-			if(num_numbers < 4 && (data >= '0' && data <= '9')){
-				num_digits[increment] = data;
+			if(num_numbers < 4 && data != ',' && num_commas < 5){
+				num_digits[num_numbers] = data;
 				num_numbers++;
-				increment++;
 				fprintf(uart, "%c", data);
 
 			// Check that the player confirms the five t numbers using comma
 			}else if(num_numbers > 0 && data == ',' && num_commas < 5){
 				num_numbers = 0;
-				num_digits[increment] = data;
-				increment++;
+				t[num_commas] = (int) num_digits;
 				num_commas++;
 
 				// Clear data
+				num_digits[0] = 0;
 				fprintf(uart, "%c", data);
 
 			// Finally escape this loop.
-			}else if(num_commas > 4 && data == 'z'){
-				num_digits[increment] = '\0';
-				settings_made = 1;
-				fprintf(uart, "\r\n%s\r\n", num_digits);
-				//Iterates through num_digits
-				char temp[5];
-				int PosT = 0;
-				int TempIterator = 0;
-				for (int i=0; i<sizeof(num_digits); i++) {
-					if (num_digits[i] >= '0' && num_digits[i] <= '9') {
-						temp[TempIterator] = num_digits[i];
-						TempIterator++;
-					}
-					else if (num_digits[i] == ',') {
-						t[PosT] = atoi(temp);
-						temp[0] = '\0';
-						TempIterator = 0;
-						PosT++;
-					}
-					else if (num_digits[i] == '\0') {
-						t[PosT] = atoi(temp);
-						temp[0] = '\0';
-						PosT = 0;
-
-						printf("t[0]: %d, ", t[0]);
-						printf("t[1]: %d, ", t[1]);
-						printf("t[2]: %d, ", t[2]);
-						printf("t[3]: %d, ", t[3]);
-						printf("t[4]: %d, ", t[4]);
-						printf("t[5]: %d\n", t[5]);
-
-						break;
-					}
-				}
 			}
+
+			if(num_commas == 5){
+				settings_made = 1;
+			}
+
+		}else if(num_commas == 5 && data == '\n'){
 
 		}
 	}
-
-
 }
 
 /*
@@ -599,9 +568,9 @@ int main() {
 		}else{
 			if(traffic == RR && IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) == 6 ){
 				timeout_data_handler();
+			}else{
+				configurable_tlc();
 			}
-			configurable_tlc();
-
 		}
 
 
