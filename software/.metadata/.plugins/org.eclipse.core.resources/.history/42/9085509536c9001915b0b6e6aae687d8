@@ -89,10 +89,10 @@ void init_buttons_pio(void* context, alt_u32 id){
 	// Clear the edge capture register
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
 
-	if ((*temp) == 1){
+	if ((*temp) == 1 && traffic != RG){
 		pedNS = pressed;
 	}
-	if ((*temp) == 2){
+	if ((*temp) == 2 && traffic != GR){
 		pedWE = pressed;
 	}
 	if ((*temp) == 4 && mode == 4){
@@ -308,7 +308,7 @@ void pedestrian_tlc(){
 	 // Set respective running pedestrian signal back to idle on yellow light.
 	switch(traffic){
 		case RG:
-			if(pedNS == pressed && timeCountMain == 0){
+			if(pedNS == pressed){
 				pedNS = running;
 			}
 			if(pedNS == running){
@@ -321,7 +321,7 @@ void pedestrian_tlc(){
 			}
 			break;
 		case GR:
-			if(pedWE == pressed && timeCountMain == 0){
+			if(pedWE == pressed){
 				pedWE = running;
 			}
 			if(pedWE == running){

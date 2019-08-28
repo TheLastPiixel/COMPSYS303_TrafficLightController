@@ -308,7 +308,7 @@ void pedestrian_tlc(){
 	 // Set respective running pedestrian signal back to idle on yellow light.
 	switch(traffic){
 		case RG:
-			if(pedNS == pressed && timeCountMain == 0){
+			if(pedNS == pressed){
 				pedNS = running;
 			}
 			if(pedNS == running){
@@ -321,7 +321,7 @@ void pedestrian_tlc(){
 			}
 			break;
 		case GR:
-			if(pedWE == pressed && timeCountMain == 0){
+			if(pedWE == pressed){
 				pedWE = running;
 			}
 			if(pedWE == running){

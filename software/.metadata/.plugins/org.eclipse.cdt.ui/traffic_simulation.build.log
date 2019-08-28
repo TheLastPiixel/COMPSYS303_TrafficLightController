@@ -1,4 +1,4 @@
-11:38:28 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+13:54:36 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -8,7 +8,7 @@ C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-director
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
 main.c: In function 'main':
-main.c:554:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+main.c:556:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
   ^
 Info: Linking traffic_simulation.elf
@@ -20,5 +20,5 @@ Info: Creating traffic_simulation.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
 [traffic_simulation build complete]
 
-11:38:42 Build Finished (took 13s.729ms)
+13:54:45 Build Finished (took 8s.719ms)
 
