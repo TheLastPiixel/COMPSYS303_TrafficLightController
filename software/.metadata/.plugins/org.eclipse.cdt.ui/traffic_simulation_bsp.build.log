@@ -1,6 +1,6 @@
-13:32:49 **** Build of configuration Nios II for project traffic_simulation_bsp ****
+10:13:04 **** Build of configuration Nios II for project traffic_simulation_bsp ****
 make all 
 [BSP build complete]
 
-13:32:52 Build Finished (took 3s.671ms)
+10:13:08 Build Finished (took 3s.430ms)
 

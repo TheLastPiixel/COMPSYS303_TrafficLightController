@@ -33,28 +33,27 @@
 #define TNS_Y 2
 #define TNS_G 1
 
-/*
- * Enum for the car traffic lights.
- */
+// Enum for the car traffic lights.
 enum traffic{
 	RR, RG, RY, GR, YR
 };
 
+// Enum for determining whether RR->RG or RR->GR.
 enum NSEW_traffic_next{
 	NS, WE
 };
 
-/*
- * Enum for the pedestrian lights. Two for NS and EW are made respectively.
- */
+// Enum for the pedestrian lights. Two for NS and EW are made respectively.
 enum pedestrian{
 	idle, pressed, running
 };
 
+// Enum for car entry and exit state.
 enum car_state{
 	entered, exited
 };
 
+// Enum for the camera state.
 enum picture_taken{
 	standby, monitoring, taken
 };
@@ -69,13 +68,14 @@ void* context_going_to_be_passed;
 int LEDs = 0;
 FILE *lcd, *uart;
 int mode, previousMode, timeCountMain, timeCountCamera, buttonValue = 0;
+int settings_made = 0, switches_pattern, previous_switches_pattern;
+int t[6] = {5,60,20,5,60,20}; // Set default times to be the same as MODE 1.
 enum pedestrian pedNS, pedWE;
 enum traffic traffic;
 enum NSEW_traffic_next next_traffic;
 enum car_state car_action, previous_car_action;
 enum picture_taken cam_0;
-int settings_made = 0;
-int t[6] = {5,5,5,5,5,5};
+
 
 /*
  * Initialisers
@@ -89,11 +89,24 @@ void init_buttons_pio(void* context, alt_u32 id){
 	// Clear the edge capture register
 	IOWR_ALTERA_AVALON_PIO_EDGE_CAP(KEYS_BASE, 0);
 
-	if ((*temp) == 1){
-		pedNS = pressed;
-	}
-	if ((*temp) == 2){
-		pedWE = pressed;
+	/*
+	 * KEY0 is 1
+	 * KEY1 is 2
+	 * KEY2 is 4
+	 *
+	 * All keys do nothing on MODE 1.
+	 * KEY2 will only change to entered state on MODE 4.
+	 *
+	 * KEY0 and KEY1 to set pedestrian crossings from idle to pressed.
+	 * KEY2 will set car entered and exited state on intersection where appropriate.
+	 */
+	if(mode > 1){
+		if ((*temp) == 1){
+			pedNS = pressed;
+		}
+		if ((*temp) == 2){
+			pedWE = pressed;
+		}
 	}
 	if ((*temp) == 4 && mode == 4){
 		if(car_action == exited && (traffic != RG && traffic != GR)){
@@ -109,6 +122,7 @@ void init_buttons_pio(void* context, alt_u32 id){
 /*
  * Interrupts
  */
+
 //handler for the traffic light timer interrupt
 alt_u32 tlc_timer_isr(void* context){
 	int *timeCount = (int*) context;
@@ -126,6 +140,7 @@ alt_u32 camera_timer_isr(void* context){
 /*
  * Setters
  */
+
 //write the current mode to the LCD
 void lcd_set_mode(){
 	if(lcd != NULL){
@@ -136,65 +151,98 @@ void lcd_set_mode(){
 
 //parses the configuration string and updates the timeouts
 void timeout_data_handler(){
-	if(uart != NULL && settings_made == 0){
-		fprintf(uart, "Insert t values in format t1,t2,t3,t4,t5,t6[\\r]\\n: (Press Z to enter)\r\n");
+	if(uart != NULL && settings_made == 0 && switches_pattern > 5 && switches_pattern < 8){
+		fprintf(uart, "\r\nTraffic lights simulation paused!\r\n");
+		fprintf(uart, "Welcome to configurations settings.\r\n");
+		fprintf(uart, "To change the timing settings, enter the values as instructed.\r\n");
+		fprintf(uart, "Values are in number of 100ms (i.e 5 represents 500ms).\r\n");
+		fprintf(uart, "Here are the values representation:\r\n");
+		fprintf(uart, "RR time until t1 then -> RG\r\n");
+		fprintf(uart, "RG time until t2 then -> RY\r\n");
+		fprintf(uart, "RY time until t3 then -> RR\r\n");
+		fprintf(uart, "RR time until t4 then -> GR\r\n");
+		fprintf(uart, "GR time until t5 then -> YR\r\n");
+		fprintf(uart, "YR time until t6 then -> RR\r\n\n");
+		fprintf(uart, "If you want to go back without saving changes, \r\n");
+		fprintf(uart, "flick SW[2] back to 0 and press any key to continue.\r\n\n");
+		fprintf(uart, "Otherwise, follow the instructions below.\r\n");
+		fprintf(uart, "Insert t values in format t1,t2,t3,t4,t5,t6 (Example \"5,60,20,5,60,20\"):\r\n");
 	}
 
-	//Iterator for data position
+	//Iterator for data positions and string modifications.
 	char data;
 	char num_digits[31];
 	int num_numbers = 0, num_commas = 0, increment = 0;
 
-	//Check that the string format is correct and enter is pressed.
-	while(IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) == 6 && settings_made == 0){
+	/*
+	 * Check that the string format is correct and enter (Z) is pressed.
+	 * Once correct, process the string to the integer array from t[0] to t[5].
+	 */
+
+	while(settings_made == 0){
+		switches_pattern = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE);
+
+		// Turning SW[2] to 0 makes no changes to configurable tlc if no correct data entered.
+		if(switches_pattern < 6 || switches_pattern > 7){
+			settings_made = 1;
+			break;
+		}
+
 		data = fgetc(uart);
 
-		//Check that the data input consists only commas
-		if((data >= '0' && data <= '9') || data == ',' || data == 'z'){
+		//Check that the data input consists only commas, numbers and an enter key.
+		if((data >= '0' && data <= '9') || data == ',' || data == '\r'){
 
-			// Check that the player is entering digit number.
+			// Check that the player is entering digit number and that number does not exceed 9999.
 			if(num_numbers < 4 && (data >= '0' && data <= '9')){
 				num_digits[increment] = data;
 				num_numbers++;
 				increment++;
 				fprintf(uart, "%c", data);
 
-			// Check that the player confirms the five t numbers using comma
+			// Check that the player confirms previous number using a comma
 			}else if(num_numbers > 0 && data == ',' && num_commas < 5){
 				num_numbers = 0;
 				num_digits[increment] = data;
 				increment++;
 				num_commas++;
-
-				// Clear data
 				fprintf(uart, "%c", data);
 
-			// Finally escape this loop.
-			}else if(num_commas > 4 && data == 'z'){
+			// Finalise the string as enter is pressed and the number of columns is pressed.
+			}else if(num_commas > 4 && num_numbers > 0 && data == '\r'){
 				num_digits[increment] = '\0';
 				settings_made = 1;
-				fprintf(uart, "\r\n%s\r\n", num_digits);
+				if(uart != NULL){
+					fprintf(uart, "\r\n%s\r\n", "Values in form t1,t2,t3,t4,t5,t6 entered successfully!");
+				}
 
 				//Iterates through num_digits
 				char temp[5];
 				int PosT = 0;
 				int TempIterator = 0;
 				for (int i=0; i<sizeof(num_digits); i++) {
+					// Extract a copy of 1-4 digit number from string
 					if (num_digits[i] >= '0' && num_digits[i] <= '9') {
 						temp[TempIterator] = num_digits[i];
 						TempIterator++;
 					}
+					// On detection of comma, convert copy of 1-4 digit number to integer to add to configurations t0 to t4.
 					else if (num_digits[i] == ',') {
 						t[PosT] = atoi(temp);
 						memset(temp, 0, 5);
 						TempIterator = 0;
 						PosT++;
 					}
+					//Similar to the other else if statement but applies to t5 and conclude the configuration.
 					else if (num_digits[i] == '\0') {
 						t[PosT] = atoi(temp);
 						memset(temp, 0, 5);
-						PosT = 0;
 
+						if(uart != NULL){
+							fprintf(uart, "Flick SW[2] back to 0 to resume simulation!\r\n");
+						}
+
+						// Debugging purposes.
 						printf("t[0]: %d, ", t[0]);
 						printf("t[1]: %d, ", t[1]);
 						printf("t[2]: %d, ", t[2]);
@@ -206,11 +254,8 @@ void timeout_data_handler(){
 					}
 				}
 			}
-
 		}
 	}
-
-
 }
 
 /*
@@ -242,7 +287,7 @@ void simple_tlc(){
 			// Set green leds
 			LEDs = TWE_R + TNS_G;
 
-			// Set next traffic not to re-do RG
+			// Make RR state on traffic not to re-do RG
 			if(next_traffic == NS){
 				next_traffic = WE;
 			}
@@ -273,7 +318,7 @@ void simple_tlc(){
 			// Set green leds
 			LEDs = TWE_G + TNS_R;
 
-			// Set next traffic not to re-do GR
+			// Make RR state on traffic not to re-do GR
 			if(next_traffic == WE){
 				next_traffic = NS;
 			}
@@ -304,8 +349,11 @@ void simple_tlc(){
 
 //implements the pedestrian traffic light controller
 void pedestrian_tlc(){
-	 // Any state (pedNS and/or pedWE) that is in pressed state.
-	 // Set respective running pedestrian signal back to idle on yellow light.
+	 /*
+	  * Any state (pedNS and/or pedWE) that is in pressed state to become running state when changed
+	  * respectively from red to green on the same direction (NS/WE).
+	  * Set respective running pedestrian signal back to idle on yellow light.
+	  */
 	switch(traffic){
 		case RG:
 			if(pedNS == pressed && timeCountMain == 0){
@@ -345,7 +393,7 @@ void configurable_tlc(){
 			// Set green leds
 			LEDs = TWE_R + TNS_R;
 
-			// next traffic decides whether to go RG or GR
+			// Perform a hard check on NS and WE states with their respective timeout durations.
 			if(next_traffic == NS && timeCountMain >= t[0]){
 				traffic = RG;
 				alt_alarm_stop(&timer);
@@ -353,7 +401,7 @@ void configurable_tlc(){
 
 				// start the timer, with timeout
 				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
-			}else if(timeCountMain >= t[3]){
+			}else if(next_traffic == WE && timeCountMain >= t[3]){
 				traffic = GR;
 				alt_alarm_stop(&timer);
 				timeCountMain = 0;
@@ -367,7 +415,7 @@ void configurable_tlc(){
 			// Set green leds
 			LEDs = TWE_R + TNS_G;
 
-			// Set next traffic not to re-do RG
+			// Make RR state on traffic not to re-do RG
 			if(next_traffic == NS){
 				next_traffic = WE;
 			}
@@ -398,7 +446,7 @@ void configurable_tlc(){
 			// Set green leds
 			LEDs = TWE_G + TNS_R;
 
-			// Set next traffic not to re-do GR
+			// Make RR state on traffic not to re-do GR
 			if(next_traffic == WE){
 				next_traffic = NS;
 			}
@@ -429,101 +477,74 @@ void configurable_tlc(){
 
 //implements the traffic light controller with integrated camera
 void camera_tlc(){
+	//If the car stays in the intersection for more than 2 seconds on yellow light, take snapshot.
 	if(timeCountCamera >= 20 && cam_0 == monitoring){
 		if(uart != NULL){
 			fprintf(uart, "Snapshot Taken!\r\n");
 		}
 		cam_0 = taken;
 	}
-	switch(traffic){
-		case YR:
 
-			// Check that car has entered/exited
-
-			//First if statement checks for recent change in car action.
-			if(car_action == entered && previous_car_action != car_action){
-				if(uart != NULL){
-					fprintf(uart, "Camera activated\r\n");
+	// Check that car_action state has only changed recently.
+	if(previous_car_action != car_action){
+		switch(traffic){
+			case YR:
+				//First if statement checks for car entered state. Start monitoring car entering on yellow light.
+				if(car_action == entered){
+					if(uart != NULL){
+						fprintf(uart, "\r\nCamera activated\r\n");
+					}
+					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
+					cam_0 = monitoring;
 				}
-				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
-				cam_0 = monitoring;
+				break;
 
-			//Check that the car has exited. Report time taken
-			}else if(cam_0 != standby && car_action == exited){
-				if(uart != NULL){
-					fprintf(uart, "Vehicle left\r\n");
-					fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n\n",
-											timeCountCamera / 10, timeCountCamera % 10);
+			case RY:
+				//First if statement checks for car entered state. Start monitoring car entering on yellow light.
+				if(car_action == entered){
+					if(uart != NULL){
+						fprintf(uart, "\r\nCamera activated\r\n");
+					}
+					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
+					cam_0 = monitoring;
 				}
+				break;
 
-				alt_alarm_stop(&timer1);
-				timeCountCamera = 0;
-				cam_0 = standby;
-			}
-			break;
-
-		case RY:
-			// Check that car has entered/exited
-
-			//First if statement checks for recent change in car action.
-			if(car_action == entered && previous_car_action != car_action){
-				if(uart != NULL){
-					fprintf(uart, "Camera activated\r\n");
-				}
-				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
-				cam_0 = monitoring;
-
-			//Check that the car has exited. Report time taken
-			}else if(cam_0 != standby && car_action == exited){
-				if(uart != NULL){
-					fprintf(uart, "Vehicle left\r\n");
-					fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n\n",
-											timeCountCamera / 10, timeCountCamera % 10);
-				}
-				alt_alarm_stop(&timer1);
-				timeCountCamera = 0;
-				cam_0 = standby;
-			}
-			break;
-
-		default:
-			/*
-			 * Other states such as RG, GR and RR.
-			 * Take picture immediately when car passes on button click.
-			 */
-
-			// Check for change in car action.
-			if(previous_car_action != car_action){
-
-				//Check that the snapshot is not taken and changed to entered state.
+			case RR:
+				// In RR, cars that illegally enter intersection will be taken immediately by camera.
 				if(car_action == entered && cam_0 == standby){
 					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 					if(uart != NULL){
-						fprintf(uart, "Camera activated\r\n");
+						fprintf(uart, "\r\nCamera activated\r\n");
 						fprintf(uart, "Snapshot Taken!\r\n");
 					}
 					cam_0 = taken;
-
-				//Anytime the vehicle exits
-				}else if(car_action == exited){
-					if(uart != NULL){
-						fprintf(uart, "Vehicle left\r\n");
-						fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n\n",
-												timeCountCamera / 10, timeCountCamera % 10);
-					}
-					alt_alarm_stop(&timer1);
-					timeCountCamera = 0;
-					cam_0 = standby;
 				}
+
+				break;
+
+			default:
+				// Do nothing on any green light state as the car is assumed to go on the green light direction.
+				break;
+		}
+
+		// Record time taken when car has just exited and reset camera.
+		if(car_action == exited){
+			if(uart != NULL){
+				fprintf(uart, "Vehicle left\r\n");
+				fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n",
+										timeCountCamera / 10, timeCountCamera % 10);
 			}
 
-			break;
+			// Reset timer and set camera on standby.
+			alt_alarm_stop(&timer1);
+			timeCountCamera = 0;
+			cam_0 = standby;
+		}
 	}
+
 	previous_car_action = car_action;
 }
-
-
-
 
 int main() {
 	// Initialise
@@ -539,7 +560,8 @@ int main() {
 	 * Make sure only the 2 switches on the right will change the mode of the simulation.
 	 * +1 will make sure mode is {1,2,3,4}.
 	 */
-	mode = (IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) % 4) + 1;
+	switches_pattern = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE);
+	mode = (switches_pattern % 4) + 1;
 
 	lcd = fopen(LCD_NAME, "w");
 	uart = fopen(UART_NAME, "r+");
@@ -567,6 +589,7 @@ int main() {
 	timerCameraContext = (void*) &timeCountCamera;
 
 	while(1)  {
+		switches_pattern = IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE);
 
 		/*
 		 * This function gets the switches setup and prints the value of mode on LCD.
@@ -575,41 +598,60 @@ int main() {
 		 * Reset some settings to initial when switches changed.
 		 */
 		if(traffic == RR){
-			mode = (IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) % 4) + 1;
+			mode = (switches_pattern % 4) + 1;
 			if(mode != previousMode){
 				lcd_set_mode(mode);
 				car_action = exited;
-				settings_made = 0;
 			}
 			previousMode = mode;
 		}
 
+		// Assure that each time a switch is changed especially SW[2], make settings_made = 0.
+		if(switches_pattern != previous_switches_pattern){
+			settings_made = 0;
+		}
+
 		/*
 		 * Different modes
+		 * All ascending modes have previous mode properties.
+		 * MODE 1: Simple traffic light controller.
+		 * MODE 2: Added pedestrian crossing.
+		 * MODE 3: Configurable traffic light controller. (Default timing is same as MODE 1)
+		 * MODE 4: Added Car entry/exit with camera module to detect wrong-doings.
 		 */
-		// If mode is not 3 because modes 1, 2 and 4 uses simple_tlc
-		if(mode != 3){
+
+		// Simple tlc is used in MODE 1 and MODE 2.
+		if(mode < 3){
 			simple_tlc();
 
 			//Only mode one does not utilise pedestrian crossing
 			if(mode == 2){
 				pedestrian_tlc();
 			}
+			//Turns on LEDs based on TLC
+			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, LEDs);
+
+		// Configurable tlc is used in MODE 3 and MODE 4.
+		}else{
+			configurable_tlc();
+			pedestrian_tlc();
+
+			//Turns on LEDs based on TLC
+			IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, LEDs);
+
 			if(mode == 4){
 				camera_tlc();
 			}
-		}else{
-			if(traffic == RR && IORD_ALTERA_AVALON_PIO_DATA(SWITCHES_BASE) == 6 ){
+
+			//Check that state is on RR by using LEDs.
+			if(IORD_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE) == 36 && (switches_pattern == 6 || switches_pattern == 7)){
+				// Pause the timer for the traffic lights.
+				alt_alarm_stop(&timer);
 				timeout_data_handler();
+				alt_alarm_start(&timer, 100, tlc_timer_isr, timerContext);
 			}
-			configurable_tlc();
-
 		}
-
-
-		//Turns on LEDs based on TLC
-		IOWR_ALTERA_AVALON_PIO_DATA(LEDS_GREEN_BASE, LEDs);
-
+		previous_switches_pattern = switches_pattern;
 	}
 
 	fclose(lcd);
