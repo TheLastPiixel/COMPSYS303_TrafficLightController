@@ -175,7 +175,7 @@ void timeout_data_handler(){
 	int num_numbers = 0, num_commas = 0, increment = 0;
 
 	/*
-	 * Check that the string format is correct and enter (Z) is pressed.
+	 * Check that the string format is correct and enter is pressed.
 	 * Once correct, process the string to the integer array from t[0] to t[5].
 	 */
 
@@ -208,7 +208,7 @@ void timeout_data_handler(){
 				num_commas++;
 				fprintf(uart, "%c", data);
 
-			// Finalise the string as enter is pressed and the number of columns is pressed.
+			// Finalise the string as enter is pressed and the number of columns is present.
 			}else if(num_commas > 4 && num_numbers > 0 && data == '\r'){
 				num_digits[increment] = '\0';
 				settings_made = 1;
