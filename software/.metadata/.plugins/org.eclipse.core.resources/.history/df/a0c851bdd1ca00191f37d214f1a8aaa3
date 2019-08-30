@@ -110,7 +110,7 @@ void init_buttons_pio(void* context, alt_u32 id){
 		}
 	}
 	if ((*temp) == 4 && mode == 4){
-		if(car_action == exited){
+		if(car_action == exited && (traffic != RG && traffic != GR)){
 			car_action = entered;
 		}else{
 			car_action = exited;
@@ -138,7 +138,7 @@ alt_u32 camera_timer_isr(void* context){
 	return 100;
 }
 
-//handler for the vehicle time spent at intersection
+//handler for the red light camera timer interrupt
 alt_u32 car_timer_isr(void* context){
 	int *timeCountCar = (int*) context;
 	(*timeCountCar)++;
@@ -495,15 +495,12 @@ void camera_tlc(){
 
 	// Check that car_action state has only changed recently.
 	if(previous_car_action != car_action){
-
-		// Start the timer that the car spends in intersection.
 		if(car_action == entered){
-			alt_alarm_start(&timer2, 100, car_timer_isr, timerCarContext);
 			if(uart != NULL){
 				fprintf(uart, "\r\nVehicle Entered!\r\n");
 			}
+			alt_alarm_start(&timer2, 100, car_timer_isr, timerCarContext);
 		}
-
 
 		// Record time taken when car has just exited and reset camera.
 		if(car_action == exited){
@@ -512,12 +509,11 @@ void camera_tlc(){
 			alt_alarm_stop(&timer2);
 
 			if(uart != NULL){
-				fprintf(uart, "Vehicle left!\r\n");
+				fprintf(uart, "Vehicle left\r\n");
 				fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n",
 										timeCountCar / 10, timeCountCar % 10);
-				// Also record camera activity if there was camera activity
-				if(cam_0 != standby){
-					fprintf(uart, "Camera operation time taken: %d.%d seconds\r\n",
+				if(timeCountCamera > 0){
+					fprintf(uart, "Camera time activated: %d.%d seconds\r\n",
 										timeCountCamera / 10, timeCountCamera % 10);
 				}
 			}
@@ -528,49 +524,48 @@ void camera_tlc(){
 		}
 	}
 
-	if(car_action == entered){
-		switch(traffic){
-			case YR:
-				//Start monitoring car in intersection on yellow light.
-				if(cam_0 == standby){
-					if(uart != NULL){
-						fprintf(uart, "Camera activated\r\n");
-					}
-					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
-					cam_0 = monitoring;
+	switch(traffic){
+		case YR:
+			//First if statement checks for car entered state. Start monitoring car entering on yellow light.
+			if(cam_0 == standby && car_action == entered){
+				if(uart != NULL){
+					fprintf(uart, "Camera activated\r\n");
 				}
-				break;
+				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 
-			case RY:
-				//Start monitoring car in intersection on yellow light.
-				if(cam_0 == standby){
-					if(uart != NULL){
-						fprintf(uart, "Camera activated\r\n");
-					}
-					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
-					cam_0 = monitoring;
+				cam_0 = monitoring;
+			}
+			break;
+
+		case RY:
+			//First if statement checks for car entered state. Start monitoring car entering on yellow light.
+			if(cam_0 == standby && car_action == entered){
+				if(uart != NULL){
+					fprintf(uart, "Camera activated\r\n");
 				}
-				break;
+				alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
 
-			case RR:
-				// In RR, cars that illegally enter intersection will be taken immediately by camera.
-				if(cam_0 == standby){
-					alt_alarm_start(&timer1, 100, camera_timer_isr, timerCameraContext);
-					if(uart != NULL){
-						fprintf(uart, "Camera activated\r\n");
-						fprintf(uart, "Snapshot Taken!\r\n");
-					}
-					cam_0 = taken;
+				cam_0 = monitoring;
+			}
+			break;
+
+		case RR:
+			// In RR, cars that illegally enter intersection will be taken immediately by camera.
+			if(cam_0 == standby && car_action == entered){
+				if(uart != NULL){
+					fprintf(uart, "Camera activated\r\n");
+					fprintf(uart, "Snapshot Taken!\r\n");
 				}
+				cam_0 = taken;
+			}
 
-				break;
+			break;
 
-			default:
-				// Do nothing on any green light state as the car is assumed to go on the green light direction.
-				break;
-		}
+		default:
+			// Do nothing on any green light state as the car is assumed to go on the green light direction.
+
+			break;
 	}
-
 	previous_car_action = car_action;
 }
 

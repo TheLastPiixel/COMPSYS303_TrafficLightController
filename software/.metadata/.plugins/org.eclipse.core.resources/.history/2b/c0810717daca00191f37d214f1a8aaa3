@@ -495,8 +495,6 @@ void camera_tlc(){
 
 	// Check that car_action state has only changed recently.
 	if(previous_car_action != car_action){
-
-		// Start the timer that the car spends in intersection.
 		if(car_action == entered){
 			alt_alarm_start(&timer2, 100, car_timer_isr, timerCarContext);
 			if(uart != NULL){
@@ -507,31 +505,27 @@ void camera_tlc(){
 
 		// Record time taken when car has just exited and reset camera.
 		if(car_action == exited){
-			// Reset timer and set camera on standby.
-			alt_alarm_stop(&timer1);
-			alt_alarm_stop(&timer2);
-
 			if(uart != NULL){
 				fprintf(uart, "Vehicle left!\r\n");
 				fprintf(uart, "Vehicle time in intersection taken: %d.%d seconds\r\n",
 										timeCountCar / 10, timeCountCar % 10);
-				// Also record camera activity if there was camera activity
-				if(cam_0 != standby){
+				if(cam_0 == taken){
 					fprintf(uart, "Camera operation time taken: %d.%d seconds\r\n",
 										timeCountCamera / 10, timeCountCamera % 10);
 				}
 			}
 
+			// Reset timer and set camera on standby.
+			alt_alarm_stop(&timer1);
+			alt_alarm_stop(&timer2);
 			timeCountCamera = 0;
-			timeCountCar = 0;
 			cam_0 = standby;
 		}
 	}
-
 	if(car_action == entered){
 		switch(traffic){
 			case YR:
-				//Start monitoring car in intersection on yellow light.
+				//First if statement checks for car entered state. Start monitoring car entering on yellow light.
 				if(cam_0 == standby){
 					if(uart != NULL){
 						fprintf(uart, "Camera activated\r\n");
@@ -542,7 +536,7 @@ void camera_tlc(){
 				break;
 
 			case RY:
-				//Start monitoring car in intersection on yellow light.
+				//First if statement checks for car entered state. Start monitoring car entering on yellow light.
 				if(cam_0 == standby){
 					if(uart != NULL){
 						fprintf(uart, "Camera activated\r\n");

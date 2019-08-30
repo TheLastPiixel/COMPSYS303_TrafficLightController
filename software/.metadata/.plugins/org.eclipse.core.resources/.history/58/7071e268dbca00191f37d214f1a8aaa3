@@ -531,7 +531,7 @@ void camera_tlc(){
 	if(car_action == entered){
 		switch(traffic){
 			case YR:
-				//Start monitoring car in intersection on yellow light.
+				//Start monitoring car entering on yellow light.
 				if(cam_0 == standby){
 					if(uart != NULL){
 						fprintf(uart, "Camera activated\r\n");
@@ -542,7 +542,7 @@ void camera_tlc(){
 				break;
 
 			case RY:
-				//Start monitoring car in intersection on yellow light.
+				//Start monitoring car entering on yellow light.
 				if(cam_0 == standby){
 					if(uart != NULL){
 						fprintf(uart, "Camera activated\r\n");

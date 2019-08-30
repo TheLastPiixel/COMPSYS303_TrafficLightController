@@ -1,4 +1,4 @@
-10:13:18 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+15:38:16 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -6,7 +6,7 @@ Info: Building ../traffic_simulation_bsp/
 C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
 [BSP build complete]
 [traffic_simulation build complete]
-10:13:34 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+15:38:24 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -14,15 +14,7 @@ Info: Building ../traffic_simulation_bsp/
 C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
 [BSP build complete]
 [traffic_simulation build complete]
-10:14:11 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-[traffic_simulation build complete]
-10:25:06 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+15:39:57 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -32,1158 +24,18 @@ C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-director
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
 main.c: In function 'main':
-main.c:540:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+main.c:598:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
   ^
 Info: Linking traffic_simulation.elf
 nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
 nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-10:26:42 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:540:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-10:33:13 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:549:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-10:36:59 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:549:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-10:42:22 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:551:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-10:52:21 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:550:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-main.c:612:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-     usleep(100);
-     ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-10:55:29 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:00:43 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:02:56 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:06:15 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:11:28 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:14:03 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:16:17 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'timeout_data_handler':
-main.c:161:58: warning: comparison between pointer and integer
-   if((data >= '0' && data <= '9') || data == ',' || data == "\n"){
-                                                          ^
-main.c:161:58: warning: comparison with string literal results in unspecified behavior [-Waddress]
-main.c:181:55: warning: comparison between pointer and integer
-    }else if(num_commas > 4 && num_numbers > 0 && data == "\n"){
-                                                       ^
-main.c:181:55: warning: comparison with string literal results in unspecified behavior [-Waddress]
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:17:02 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:18:14 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:548:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:19:16 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:551:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:20:56 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:551:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:23:12 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:546:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:23:50 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:546:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:24:47 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:546:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:37:50 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:553:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:39:43 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:553:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:44:40 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:555:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:50:55 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:553:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-11:53:05 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:553:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:07:24 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:550:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:12:11 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:547:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:13:57 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:550:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:21:58 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:28:07 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 84 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:30:57 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:35:17 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:565:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:40:54 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:45:36 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:49:16 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:50:46 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'timeout_data_handler':
-main.c:181:61: warning: multi-character character constant [-Wmultichar]
-   if((data >= '0' && data <= '9') || data == ',' || data == '\r\n'){
-                                                             ^
-main.c:199:58: warning: multi-character character constant [-Wmultichar]
-    }else if(num_commas > 4 && num_numbers > 0 && data == '\r\n'){
-                                                          ^
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 83 KBytes program size (code + initialized data).
-Info:                          8101 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:55:36 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-12:58:32 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:01:23 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:562:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:04:24 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:05:52 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:569:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:08:27 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:11:53 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:13:27 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:22:20 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:23:14 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-[traffic_simulation build complete]
-13:24:33 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:25:12 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:29:40 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:32:24 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:34:15 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:566:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:38:29 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:571:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:40:28 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:571:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:47:47 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:570:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
-Info:                          8099 KBytes free for stack + heap.
-Info: Creating traffic_simulation.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
-[traffic_simulation build complete]
-13:55:38 **** Incremental Build of configuration Nios II for project traffic_simulation ****
-make all 
-/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
-/usr/bin/sh: line 0: cd: ../../: No such file or directory
-Info: Building ../traffic_simulation_bsp/
-C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
-[BSP build complete]
-Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-main.c: In function 'main':
-main.c:577:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
-  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
-  ^
-Info: Linking traffic_simulation.elf
-nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
+Info: (traffic_simulation.elf) 86 KBytes program size (code + initialized data).
 Info:                          8098 KBytes free for stack + heap.
 Info: Creating traffic_simulation.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
 [traffic_simulation build complete]
-13:56:52 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+15:40:54 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -1193,18 +45,26 @@ C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-director
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
 main.c: In function 'main':
-main.c:577:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+main.c:587:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
   ^
 Info: Linking traffic_simulation.elf
 nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
 nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
+Info: (traffic_simulation.elf) 86 KBytes program size (code + initialized data).
 Info:                          8098 KBytes free for stack + heap.
 Info: Creating traffic_simulation.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
 [traffic_simulation build complete]
-13:58:36 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+15:44:02 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+make all 
+/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
+/usr/bin/sh: line 0: cd: ../../: No such file or directory
+Info: Building ../traffic_simulation_bsp/
+C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
+[BSP build complete]
+[traffic_simulation build complete]
+15:44:56 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -1214,18 +74,18 @@ C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-director
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
 main.c: In function 'main':
-main.c:577:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+main.c:587:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
   ^
 Info: Linking traffic_simulation.elf
 nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
 nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
+Info: (traffic_simulation.elf) 86 KBytes program size (code + initialized data).
 Info:                          8098 KBytes free for stack + heap.
 Info: Creating traffic_simulation.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
 [traffic_simulation build complete]
-14:01:42 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+15:52:49 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -1235,18 +95,18 @@ C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-director
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
 main.c: In function 'main':
-main.c:577:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+main.c:596:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
   ^
 Info: Linking traffic_simulation.elf
 nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
 nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
-Info: (traffic_simulation.elf) 85 KBytes program size (code + initialized data).
+Info: (traffic_simulation.elf) 86 KBytes program size (code + initialized data).
 Info:                          8098 KBytes free for stack + heap.
 Info: Creating traffic_simulation.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
 [traffic_simulation build complete]
-14:04:39 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+15:54:42 **** Incremental Build of configuration Nios II for project traffic_simulation ****
 make all 
 /usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
 /usr/bin/sh: line 0: cd: ../../: No such file or directory
@@ -1256,7 +116,49 @@ C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-director
 Info: Compiling main.c to obj/default/main.o
 nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
 main.c: In function 'main':
-main.c:578:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+main.c:600:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
+  ^
+Info: Linking traffic_simulation.elf
+nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
+Info: (traffic_simulation.elf) 86 KBytes program size (code + initialized data).
+Info:                          8098 KBytes free for stack + heap.
+Info: Creating traffic_simulation.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
+[traffic_simulation build complete]
+15:56:06 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+make all 
+/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
+/usr/bin/sh: line 0: cd: ../../: No such file or directory
+Info: Building ../traffic_simulation_bsp/
+C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:600:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
+  alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
+  ^
+Info: Linking traffic_simulation.elf
+nios2-elf-g++  -T'../traffic_simulation_bsp//linker.x' -msys-crt0='../traffic_simulation_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../traffic_simulation_bsp/   -Wl,-Map=traffic_simulation.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o traffic_simulation.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert traffic_simulation.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name QSYS --quartus_project_dir "//files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation" --jdi ../..//output_files/Q-SYS.jdi --sopcinfo //files.auckland.ac.nz/myhome/Desktop/cs303-my-ass-1/software/traffic_simulation/../../QSYS.sopcinfo
+Info: (traffic_simulation.elf) 86 KBytes program size (code + initialized data).
+Info:                          8098 KBytes free for stack + heap.
+Info: Creating traffic_simulation.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source traffic_simulation.elf >traffic_simulation.objdump
+[traffic_simulation build complete]
+15:57:29 **** Incremental Build of configuration Nios II for project traffic_simulation ****
+make all 
+/usr/bin/sh: line 0: cd: ../traffic_simulation_bsp/: No such file or directory
+/usr/bin/sh: line 0: cd: ../../: No such file or directory
+Info: Building ../traffic_simulation_bsp/
+C:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../traffic_simulation_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../traffic_simulation_bsp//HAL/inc -I../traffic_simulation_bsp/ -I../traffic_simulation_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'main':
+main.c:603:2: warning: implicit declaration of function 'alt_irq_register' [-Wimplicit-function-declaration]
   alt_irq_register(KEYS_IRQ,context_going_to_be_passed,init_buttons_pio);
   ^
 Info: Linking traffic_simulation.elf
